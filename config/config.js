@@ -8,7 +8,7 @@ module.exports = {
     database: process.env.PGDATABASE,
     host: process.env.PGHOST,
     port: process.env.PGPORT,
-    dialect: 'postgres'
+    dialect: process.env.DIALECT
   },
   test: {
     username: process.env.PGUSER,
@@ -16,7 +16,7 @@ module.exports = {
     database: process.env.PGDATABASE,
     host: process.env.PGHOST,
     port: process.env.PGPORT,
-    dialect: 'postgres'
+    dialect: process.env.DIALECT
   },
   production: {
     username: process.env.PGUSER,
@@ -24,6 +24,6 @@ module.exports = {
     database: process.env.PGDATABASE,
     host: process.env.PGHOST,
     port: process.env.PGPORT,
-    dialect: 'postgres'
+    dialect: process.env.DIALECT
   }
 };
