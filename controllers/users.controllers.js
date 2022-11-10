@@ -1,11 +1,10 @@
-import {User} from '../models/user'
+import db from '../models/index'
 
 export default {
   getAll: async (request, response, next) => {
-    const users = await User.findAll();
-    //console.log(employers.every(employer => Employeer instanceof Employeer)); // true
-    //console.log("All users:", JSON.stringify(employers, null, 2));
-    response.status(200).json(users)
+    const users = await db.User.findAll();
+    console.log("All users:", JSON.stringify(users, null, 2));
+    response.status(200).json(users);
   },
 
   /*getById: async (request, response, next) => {
